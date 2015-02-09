@@ -1,0 +1,207 @@
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	body,input,textarea,select
+	{
+		font-size: 11pt;
+		line-height: 1.5em;
+	}
+
+	h2
+	{
+		font-size: 1.5em;
+	}
+
+	header
+	{
+	}
+
+		header.major
+		{
+			position: relative;
+			z-index: 1;
+		}
+	
+	.image
+	{
+	}
+
+		.image.left
+		{
+			width: 10em;
+			margin: 0.5em 2em 1em 0;
+		}
+
+		.image.play
+		{
+		}
+		
+			.image.play:before
+			{
+				margin: -16px 0 0 -16px;
+				width: 32px;
+				height: 32px;
+				line-height: 32px;
+				font-size: 24px;
+			}
+
+	.button
+	{
+		display: block;
+		width: 100%;
+	}
+
+/*********************************************************************************/
+/* Main                                                                          */
+/*********************************************************************************/
+
+	#main
+	{
+	}
+	
+		#main .viewer
+		{
+		}
+	
+			#main .viewer .reel
+			{
+			}
+			
+				#main .viewer .reel .slide
+				{
+					margin: 10px;
+				}
+				
+					#main .viewer .reel .slide article
+					{
+						padding: 15px;
+						position: relative;
+						background: #fff;
+						border-radius: 4px;
+						overflow: hidden;
+					}
+			
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header
+	{
+		padding: 1.5em 0 0.25em 0;
+		text-align: center;
+	}
+
+		#header nav
+		{
+		}
+		
+			#header nav a
+			{
+				padding: 0.25em 0.5em 0.25em 0.5em;
+			}
+
+		#header h1
+		{
+			font-size: 1.5em;
+			margin: 0 0 0.5em 0;
+		}
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+	#footer
+	{
+		padding: 1.5em 0 1.5em 0;
+		text-align: center;
+	}
+	
+/*********************************************************************************/
+/* Sidebar                                                                       */
+/*********************************************************************************/
+
+	.sidebar
+	{
+		border-top: solid 3px #f4f4f4;
+		margin: 2em 0 0 0;
+		padding: 2em 0 0 0;
+	}
+	
+/*********************************************************************************/
+/* Pages                                                                         */
+/*********************************************************************************/
+
+	.page
+	{
+		padding-top: 30px !important;
+		padding-bottom: 30px !important;
+	}
+	
+		.page.home
+		{
+			text-align: center;
+			position: relative;
+			vertical-align: middle;
+			padding: 0 0 25px 0 !important;
+		}
+		
+			.page.home br
+			{
+				display: none;
+			}
+			
+			.page.home .banner
+			{
+				height: 8em;
+				width: 100%;
+				background: url('../images/Battlestar_Galactica_intro.jpg') center center no-repeat;
+				background-size: cover;
+			}
+
+			.page.home .inner
+			{
+				padding: 30px 25px 0 25px;
+			}
+				
+				.page.home .inner:after
+				{
+					display: none;
+				}
+				
+				.page.home .intro
+				{
+					display: inline-block;
+					vertical-align: middle;
+				}
+
+					.page.home .intro header
+					{
+						margin: 0 0 0.25em 0;
+					}
+				
+						.page.home .intro header h2
+						{
+							font-size: 2em;
+						}
+
+							.page.home .intro header h2:after
+							{
+								margin-top: -0.35em;
+							}
+
+		.page.work
+		{
+			text-align: center;
+		}
+									
+/*********************************************************************************/
+/* Poptrox                                                                       */
+/*********************************************************************************/
+		
+	.poptrox-popup
+	{
+		border: solid 0.5em #fff;
+		background: #fff;
+		border-radius: 4px;
+	}

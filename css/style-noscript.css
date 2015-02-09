@@ -1,0 +1,81 @@
+/*********************************************************************************/
+/* Wrapper                                                                       */
+/*********************************************************************************/
+
+	#wrapper
+	{
+		display: block;
+		padding: 60px 0;
+	}
+
+/*********************************************************************************/
+/* Main                                                                          */
+/*********************************************************************************/
+
+	#main
+	{
+	}
+
+		#main .previous, #main .next
+		{
+			display: none;
+		}
+
+		#main .viewer
+		{
+			height: auto;
+		}
+	
+			#main .viewer .reel
+			{
+				display: block;
+			}
+			
+				#main .viewer .reel .slide
+				{
+					margin: 0 auto;
+				}
+				
+					#main .viewer .reel .slide article
+					{
+						margin: 0 auto;
+						overflow: visible;
+						height: auto;
+						clear: both;
+					}
+					
+						#main .viewer .reel .slide article .inner
+						{
+							height: auto;
+						}
+						
+/*********************************************************************************/
+/* Pages                                                                         */
+/*********************************************************************************/
+
+	.page
+	{
+	}
+	
+		.page.home
+		{
+		}
+		
+			.page.home .banner
+			{
+				position: relative;
+				top: 0;
+				left: 0;
+				height: 300px;
+				width: 100%;
+				margin: 0 0 50px 0;
+			}
+			
+			.page.home .inner
+			{
+				position: relative;
+				top: 0;
+				left: 0;
+				width: 100%;
+				padding: 0 0 50px 0;
+			}

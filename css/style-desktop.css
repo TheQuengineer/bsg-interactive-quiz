@@ -1,0 +1,425 @@
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	body,input,textarea,select
+	{
+		font-size: 14pt;
+		line-height: 1.5em;
+	}
+	
+	h2
+	{
+		font-size: 1.35em;
+	}
+
+	.gallery
+	{
+	}
+	
+		.gallery .image
+		{
+			height: 200px;
+			overflow: hidden;
+		}
+
+	.nicescroll-cursor
+	{
+		-moz-box-sizing: content-box;
+		-webkit-box-sizing: content-box;
+		-o-box-sizing: content-box;
+		-ms-box-sizing: content-box;
+		box-sizing: content-box;
+	}
+
+/*********************************************************************************/
+/* Wrapper                                                                       */
+/*********************************************************************************/
+
+	#wrapper
+	{
+		height: auto;
+		position: relative;
+		display: none;
+	}
+
+/*********************************************************************************/
+/* Main                                                                          */
+/*********************************************************************************/
+
+	#main
+	{
+		position: relative;
+		text-shadow: 1px 1px 0px rgba(255,255,255,0.75);
+	}
+	
+		#main .previous, #main .next
+		{
+			content: '';
+			display: block;
+			position: absolute;
+			width: 90px;
+			height: 722px;
+			top: -40px;
+			background-size: 28px 100%;
+			background-repeat: no-repeat;
+			z-index: 10;
+			cursor: pointer;
+		}
+
+		#main .previous
+		{
+			background-image: url('images/shadow.png');
+			left: 0;
+		}
+	
+		#main .next
+		{
+			background-image: url('images/shadow.png');
+			right: 0;
+			-moz-transform: scaleX(-1);
+			-webkit-transform: scaleX(-1);
+			-o-transform: scaleX(-1);
+			-ms-transform: scaleX(-1);
+			transform: scaleX(-1);
+		}
+	
+		#main .viewer
+		{
+			height: 640px;
+			width: 1200px;
+		}
+	
+			#main .viewer .reel
+			{
+				display: none;
+			}
+			
+				#main .viewer .reel .slide
+				{
+					width: 1048px;
+					padding: 20px 0 20px 0;
+				}
+				
+					#main .viewer .reel .slide article
+					{
+						position: relative;
+						width: 996px;
+						height: 600px;
+						overflow: hidden;
+						background: #fff;
+						border-radius: 4px;
+					}
+
+						#xmain .viewer .reel .slide article:after
+						{
+							content: '';
+							display: block;
+							width: 100%;
+							height: 100%;
+							background: url('images/bg7.png') no-repeat;
+							background-size: 100% 100%;
+							position: absolute;
+							top: 0;
+							left: 0;
+							z-index: 1;
+						}
+
+						#main .viewer .reel .slide article .inner
+						{
+							position: relative;
+							z-index: 2;
+							height: 600px;
+							width: 100% !important;
+							outline: 0;
+						}
+			
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header
+	{
+		width: 100%;
+		height: 30px;
+		line-height: 30px;
+		cursor: default;
+		margin-bottom: 0.5em;
+	}
+	
+		#header nav
+		{
+			display: block;
+			text-align: center;
+			position: relative;
+			z-index: 1;
+		}
+
+			#header nav a
+			{
+				margin: 0 1.5em 0 1.5em;
+			}
+			
+			/*
+				The classes below control the amount of space for the logo text
+				(which sits between the 2nd and 3rd nav options). Bump them both
+				to something higher if your logo text doesn't fit, or lower
+				them if there's too much space.
+			*/
+			
+			#header nav a.pad-after
+			{
+				margin-right: 6.5em;
+			}
+			
+			#header nav a.pad-before
+			{
+				margin-left: 6.5em;
+			}
+			
+		#header h1
+		{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			font-size: 1.5em;
+		}
+	
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+	#footer
+	{
+		width: 100%;
+		margin-top: 1em;
+	}	
+	
+		#footer ul
+		{
+			margin: 0 0 0.5em 0;
+		}
+	
+		#footer p
+		{
+			margin: 0;
+		}
+
+/*********************************************************************************/
+/* Pages                                                                         */
+/*********************************************************************************/
+
+	.page
+	{
+		width: 100%;
+	}
+	
+		.page .inner
+		{
+			padding: 50px;
+		}
+		
+			.page .inner:after
+			{
+				content: '';
+				position: relative;
+				display: block;
+				padding: 50px 0 0 0;
+			}
+			
+		.page.home
+		{
+			text-align: center;
+			position: relative;
+			vertical-align: middle;
+		}
+
+			.page.home .banner
+			{
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 50%;
+				width: 100%;
+				background: url('../images/Battlestar_Galactica_intro.jpg') center center no-repeat;
+				background-size: cover;
+			}
+
+			.page.home .inner
+			{
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 100%;
+				height: 50% !important;
+				padding: 0;
+			}
+			
+				.page.home .inner:before
+				{
+					content: '';
+					vertical-align: middle;
+					display: inline-block;
+					height: 100%;
+					width: 0.5%;
+				}
+				
+				.page.home .inner:after
+				{
+					display: none;
+				}
+				
+				.page.home .intro
+				{
+					display: inline-block;
+					vertical-align: middle;
+				}
+
+					.page.home .intro header
+					{
+						margin: 0 0 0.25em 0;
+					}
+				
+						.page.home .intro header h2
+						{
+							font-size: 2.25em;
+						}
+
+							.page.home .intro header h2:after
+							{
+								margin-top: -0.375em;
+							}		
+		
+		.page.work
+		{
+			text-align: center;
+		}
+		
+/*********************************************************************************/
+/* Poptrox                                                                       */
+/*********************************************************************************/
+		
+	.poptrox-popup
+	{
+		background: #fff;
+		border-radius: 4px;
+		border: solid 0.5em #fff;
+	}
+	
+		.poptrox-popup .caption
+		{
+			text-align: center;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 3em;
+			line-height: 3em;
+			width: 100%;
+			color: #fff;
+			background: #222;
+			background: rgba(24,24,32,0.75);
+		}
+	
+		.poptrox-popup .closer,
+		.poptrox-popup .nav-next,
+		.poptrox-popup .nav-previous
+		{
+			display: inline-block;
+			font-family: FontAwesome;
+			font-size: 1.25em;
+			text-decoration: none;
+			font-style: normal;
+			font-weight: normal;
+			line-height: 1;
+			-webkit-font-smoothing:antialiased;
+			-moz-osx-font-smoothing:grayscale;
+			
+			color: #fff;			
+		}
+	
+		.poptrox-popup .closer
+		{
+			width: 2em;
+			height: 2em;
+			line-height: 1.85em;
+			font-size: 1em;
+			text-align: center;
+			border-radius: 100%;
+			border: solid 2px #fff;
+			
+			position: absolute;
+			top: -2.5em;
+			right: -2.5em;
+		}
+		
+			.poptrox-popup .closer:before
+			{
+				content: '\f00d';
+			}
+
+		.poptrox-popup .nav-next,
+		.poptrox-popup .nav-previous
+		{
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: 50%;
+			cursor: pointer;
+			opacity: 0;
+			font-size: 2em;
+
+			-moz-transition: opacity 0.25s ease-in-out;
+			-webkit-transition: opacity 0.25s ease-in-out;
+			-o-transition: opacity 0.25s ease-in-out;
+			-ms-transition: opacity 0.25s ease-in-out;
+			transition: opacity 0.25s ease-in-out;
+		}
+
+			.poptrox-popup .nav-next:before,
+			.poptrox-popup .nav-previous:before
+			{
+				position: absolute;
+				top: 50%;
+				width: 3em;
+				height: 3em;
+				line-height: 3em;
+				margin-top: -1.5em;
+				text-align: center
+			}
+
+			.poptrox-popup:hover .nav-next,
+			.poptrox-popup:hover .nav-previous
+			{
+				opacity: 0.25;
+			}
+			
+			.poptrox-popup .nav-next:hover,
+			.poptrox-popup .nav-previous:hover
+			{
+				opacity: 1.0;
+			}
+
+		.poptrox-popup .nav-next
+		{
+			right: 0;
+		}
+
+			.poptrox-popup .nav-next:before
+			{
+				content: '\f054';
+				right: 0;
+			}
+
+		.poptrox-popup .nav-previous
+		{
+			left: 0;
+		}
+
+			.poptrox-popup .nav-previous:before
+			{
+				content: '\f053';
+				left: 0;
+			}
