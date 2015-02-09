@@ -1,0 +1,62 @@
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	body
+	{
+		min-width: 1000px;
+	}
+
+	body,input,textarea,select
+	{
+		font-size: 11pt;
+	}
+
+	.gallery
+	{
+	}
+	
+		.gallery .image
+		{
+			height: 150px;
+		}
+
+/*********************************************************************************/
+/* Main                                                                          */
+/*********************************************************************************/
+
+	#main
+	{
+	}
+
+		#main .previous, #main .next
+		{
+			height: 615px;
+		}
+	
+		#main .viewer
+		{
+			width: 1000px;
+			height: 525px;
+		}
+	
+			#main .viewer .reel
+			{
+			}
+			
+				#main .viewer .reel .slide
+				{
+					width: 860px;
+					padding: 20px 0 20px 0;
+				}
+				
+					#main .viewer .reel .slide article
+					{
+						width: 810px;
+						height: 485px;
+					}
+					
+						#main .viewer .reel .slide article .inner
+						{
+							height: 485px;
+						}
