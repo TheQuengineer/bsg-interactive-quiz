@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	//Defining Question Object
-	function Question (question) {
+	function Question (quiz,question) {
 		this.question = question[0];
 		this.pointValue = question[1];
 		this.answer = question[2];
@@ -11,8 +11,10 @@ $(document).ready(function () {
 
 	Question.prototype.render = function () {
 		this.element.text(this.question)
-		for (var i = 0; this.answers.length; i++) {
-			this.element.append('<input type="radio"' + escapeHtml(this.answers[i]));
+		this.element.append('<br>');
+		for (var i = 0; i < this.answers.length; i++) {
+			this.element.append('<input type="radio">' + escapeHtml(this.answers[i]) + '<br>');
+
 		}
 
 		return this;	
@@ -47,8 +49,16 @@ $(document).ready(function () {
 
 	Quiz.prototype.render = function () {
 		this.questions.forEach(function(question) {
-			this.element.append(question.render().el)
+			this.element.append(question.render().element)
 		}, this)
+		this.element.append('<br><input class="button" type="submit" value="Submit Quiz" />');
+		var self = this;
+
+		this.element.on('click', '.button', function (e) {
+  
+  			self.submit();
+		});
+
 		return this;
 	}
 
@@ -60,9 +70,12 @@ $(document).ready(function () {
        }, 0)
     }
 
+	function escapeHtml (str) {
+  		return str.replace(/</g, '&lt;').replace(/"/g, '&quot;').replace(/>/g, '&gt;');
+	}
 
     $('.quiz').append(new Quiz([
-    	['How many Humans Survived the brutal Attack from the cyclons?',2,1,['47,900','50,000','144,000','10 million']],
+    	['How many Humans Survived the brutal Attack from the cyclons?',2,1,['47,893','50,000','144,000','10 million']],
     	['What was the initial Birth Place for the Human Race?', 5, 3,['Earth','Caprica','Sagittaron','Kobol']],
   		['How many sons did Captain Adama Have?', 1, 0,['two','one','three','none']],
   		['What was the name of the President prior to the attack by the Cyclons?', 10, 2,['Franklin Cheers','Gaius Baltar','Ricard Ador','Laura Roslin']],
@@ -72,5 +85,5 @@ $(document).ready(function () {
   		["What artifact did Laura Roslin send Starbuck to find which cost her jail time?", 10, 2,['The Constituion','The tomb of Athena','Arrow of Apollo','The Cyclons Sacred map']],
   		["What is the name of the Cylon that Gaius Baltar constantly has visions of?", 5, 1, ['83','Number 6','Michell','Starbuck']],
   		["Which of the Human Colonies were considered to be the center of colonial civilization?", 10, 1,['Sagittaron','Caprica','Scorpoa','Virgon']]
-    ]).render().el)
+    ]).render().element)
 });
